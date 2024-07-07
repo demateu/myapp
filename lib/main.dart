@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:myapp/screens/details_screen.dart';
-import 'package:myapp/screens/home_screen.dart';
+import 'package:myapp/screens/imports.dart';
 
+//punto de entrada de la aplicación
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget{
@@ -16,9 +16,14 @@ class MyApp extends StatelessWidget{
       title: 'Peliculas',
       initialRoute: 'home',
       routes: {
-        'home': ( _ ) => HomeScreen(),
-        'details_screen': ( _ ) => DetailsScreen(),
-      }
+        'home': ( _ ) => const HomeScreen(),
+        'details': ( _ ) =>  const DetailsScreen(),
+      },
+      theme: ThemeData.dark().copyWith(
+        appBarTheme: const AppBarTheme(
+          color: Colors.indigo,
+        )
+      ),
     );
   }
 }

@@ -1,14 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/widgets/imports.dart';
 
 class HomeScreen extends StatelessWidget{
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:2550143371.
-  //const DetailsScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context){
-    return Container(
-      child: Center(
-        child: Text('Home'),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Peliculas en cines'),
+        elevation: 0,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.search_outlined),
+          )
+        ],
+      ),
+      body: const Column(
+        children: [
+          //card swiper
+          CardSwiper(),
+          //listado horizontal de peliculas
+        ],
       ),
     );
   }
